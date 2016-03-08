@@ -1,0 +1,35 @@
+<ion-view view-title="Simulate Log Events">
+  <ion-content class="padding">
+  	<h2>Test 1</h2>
+    <div class="item-icon-right item item-complex">
+          
+          <button type="button" ng-click='evt.entries = 0; updateLog()' >Online Mode</button>
+    
+          <button type="button" ng-click='evt.entries = 0; offlineMode()' >Offline Mode</button>
+            
+          <button type="button" ng-click='backOnline()' >Back Online</button>
+    </div>
+    
+    <br>
+    
+    <h2>Test 2</h2>
+    <div class="item-icon-right item item-complex">
+          <input  class="" type="number" ng-pattern="number" ng-model="evt.entries" required placeholder="Number of events">
+          
+          <p>Generate events for yesterday <input  class="" type="checkbox"  ng-model="evt.previousDay"></p>
+          
+          
+          <br>
+          
+          <button type="button" ng-click='updateLog()' >Online Mode</button>
+    
+          <button type="button" ng-click='offlineMode()' >Offline Mode</button>
+            
+          <button type="button" ng-click='backOnline()' >Back Online</button>
+          
+          <button type="button" ng-click='resetLog()' >Reset</button>
+    </div>
+        
+    
+  </ion-content>
+</ion-view>

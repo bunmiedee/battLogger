@@ -1,0 +1,24 @@
+<ion-view view-title="Dashboard">
+  <ion-content>
+  	
+    <ion-list>
+    
+    <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/dashboard/{{chat.id}}">
+       	<h3>Events log for: {{summ.day}}</h3>
+        <h3>Total number of events received: {{summ.eventCount}}</h3>
+        <p>Average battery level received: {{summ.average}}</p>
+        
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    
+    
+    </ion-list>
+    
+    <button type="button" ng-click="getEvtsLog('yesterday')" >Yesterday</button>
+    
+    <button type="button" ng-click="getEvtsLog('today')">Today</button>
+    
+  </ion-content>
+</ion-view>
